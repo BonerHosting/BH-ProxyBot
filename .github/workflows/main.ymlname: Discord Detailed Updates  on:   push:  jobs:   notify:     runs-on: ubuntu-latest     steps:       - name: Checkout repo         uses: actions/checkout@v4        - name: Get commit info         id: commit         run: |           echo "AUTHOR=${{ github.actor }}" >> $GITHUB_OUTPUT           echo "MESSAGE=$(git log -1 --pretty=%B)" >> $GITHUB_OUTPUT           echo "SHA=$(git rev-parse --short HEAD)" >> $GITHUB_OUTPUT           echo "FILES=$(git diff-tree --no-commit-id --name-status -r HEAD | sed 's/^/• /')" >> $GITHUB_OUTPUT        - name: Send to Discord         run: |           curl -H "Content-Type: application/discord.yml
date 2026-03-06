@@ -1,0 +1,37 @@
+name: Discord Detailed Updates
+
+on:
+  push:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Get commit info
+        id: commit
+        run: |
+          echo "AUTHOR=${{ github.actor }}" >> $GITHUB_OUTPUT
+          echo "MESSAGE=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+          echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+          echo "FILES=$(git diff-tree --no-commit-id --name-status -r HEAD | sed 's/^/• /')" >> $GITHUB_OUTPUT
+
+      - name: Send to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d "{
+            \"embeds\": [{
+              \"title\": \"🚀 Repository Update\",
+              \"color\": 5814783,
+              \"fields\": [
+                {\"name\": \"Author\", \"value\": \"${{ steps.commit.outputs.AUTHOR }}\", \"inline\": true},
+                {\"name\": \"Commit\", \"value\": \"${{ steps.commit.outputs.SHA }}\", \"inline\": true},
+                {\"name\": \"Message\", \"value\": \"${{ steps.commit.outputs.MESSAGE }}\"},
+                {\"name\": \"Files Changed\", \"value\": \"${{ steps.commit.outputs.FILES }}\"}
+              ]
+            }]
+          }" \
+          ${{ secrets.DISCORD_WEBHOOK }}
