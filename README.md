@@ -1,4 +1,4 @@
-## 🤖 Setup Guide - BonerHosting Proxy Bot
+# 🤖 Setup Guide - BonerHosting Proxy Bot
 
 ### 📌 1. Clone the Repository
 
