@@ -1,0 +1,19 @@
+{
+  "name": "bonerhosting-proxy-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for managing Nginx Proxy Manager proxies (UK1 / UK2)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "lowdb": "^6.0.1"
+  }
+}
