@@ -1,13 +1,13 @@
-# 🤖 Setup Guide - BonerHosting Proxy Bot
+# 🤖 Setup Guide - Zentrax Hosting Proxy Bot
 
 ### 📌 1. Clone the Repository
 
 ```bash
-git clone https://github.com/BonerHosting/BH-ProxyBot.git
+git clone https://github.com/ZentraxHosting/ZH-ProxyBot.git
 cd repository
 ```
 
-Or download the zip file from [here](https://github.com/BonerHosting/BH-ProxyBot/archive/refs/heads/main.zip)
+Or download the zip file from [here](https://github.com/ZentraxHosting/ZH-ProxyBot/archive/refs/heads/main.zip)
 
 ### 📦 2. Install Dependencies
 
@@ -72,7 +72,7 @@ https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scop
 ```
 ### ⚠️ 8. Issues
 
-I currently know of **ZERO** issues with the code, if you find any issues please let me know by going [here](https://github.com/BonerHosting/BH-ProxyBot/issues) and creating a new issue or reaching out to me with the following
+I currently know of **ZERO** issues with the code, if you find any issues please let me know by going [here](https://github.com/ZentraxHosting/ZH-ProxyBot/issues) and creating a new issue or reaching out to me with the following
 
 Email: [owen@puds.lol](mailto:owen@puds.lol)
 Discord: ac1q
